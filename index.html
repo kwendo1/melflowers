@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mel Flowers Exporters | Premium Kenyan roses, grown and shipped fresh</title>
+<meta name="description" content="Mel Flowers Exporters grows premium roses under glass in Kenya and ships them cold-chain to florists, wholesalers and supermarkets worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2A1030; --plum2:#431A4A; --orchid:#B83280; --peony:#F5A9C0; --blush:#FFF4F6; --petal:#FBDDE6; --leaf:#2E6B4E; --sage:#A9D1B2; --gold:#F3B63F; --lav:#D9C8F0; --ink:#241228; --mute:#6D5A72;
+  --c:#D6284A; /* active bloom colour */
+  --serif:'Gloock',Georgia,serif; --sans:'Outfit','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);color:var(--ink);background:var(--blush);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;position:relative}
+.wave{display:block;width:100%;height:auto;margin-bottom:-1px}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(255,244,246,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,50,128,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font:400 24px var(--serif);color:var(--plum)}
+.logo small{display:block;font:500 11.5px var(--sans);color:var(--orchid);margin-top:-4px;letter-spacing:.04em}
+nav ul{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15px}
+nav a{color:var(--plum);padding:6px 2px;position:relative}
+nav a::after{content:"";position:absolute;left:50%;bottom:-6px;width:6px;height:6px;border-radius:0 100% 0 100%;background:var(--orchid);transform:translateX(-50%) scale(0);transition:transform .25s}
+nav a:hover::after{transform:translateX(-50%) scale(1)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px var(--sans);padding:15px 30px;border:0;cursor:pointer;color:#fff;background:var(--orchid);border-radius:999px 8px 999px 8px;transition:border-radius .35s,transform .2s,background .25s}
+.btn:hover{border-radius:8px 999px 8px 999px;transform:translateY(-2px);background:#9d2870}
+.btn.alt{background:transparent;color:var(--plum);box-shadow:inset 0 0 0 2px var(--plum)}
+.btn.alt:hover{background:var(--plum);color:#fff}
+.menu{display:none;background:none;border:0;font:600 15px var(--sans);color:var(--plum);cursor:pointer;padding:8px}
+
+/* HERO */
+.hero{padding:60px 0 120px;background:radial-gradient(circle at 78% 40%,var(--petal),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(42px,6vw,78px);color:var(--plum)}
+.hero h1 span{color:var(--c);transition:color .6s}
+.hero p.lead{font-size:19px;max-width:500px;margin:24px 0 30px;color:var(--mute)}
+.pick{margin-top:38px}
+.pick p{font-size:14px;color:var(--mute);margin-bottom:12px}
+.pick p b{color:var(--plum)}
+.sw{display:flex;gap:12px;flex-wrap:wrap}
+.sw button{width:46px;height:46px;border:0;cursor:pointer;background:var(--k);border-radius:0 100% 0 100%;transform:rotate(-8deg);transition:transform .3s,box-shadow .3s;box-shadow:0 0 0 0 var(--k)}
+.sw button:hover{transform:rotate(8deg) scale(1.12)}
+.sw button[aria-pressed=true]{transform:rotate(0) scale(1.18);box-shadow:0 0 0 4px var(--blush),0 0 0 6px var(--k)}
+.stage{position:relative;aspect-ratio:1;max-width:560px;margin-left:auto;width:100%}
+.stage svg{width:100%;height:100%;overflow:visible}
+.stage .halo{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,#fff 0,rgba(255,255,255,0) 68%)}
+.ring1{animation:spin 90s linear infinite;transform-origin:200px 200px}
+.ring2{animation:spin 70s linear infinite reverse;transform-origin:200px 200px}
+.ring3{animation:spin 50s linear infinite;transform-origin:200px 200px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.petal{fill:color-mix(in srgb,var(--c) calc(100% - var(--s)),#000 var(--s));transition:fill .7s}
+.chip{position:absolute;background:#fff;border-radius:999px 14px 999px 14px;padding:10px 18px;font-size:14px;font-weight:500;box-shadow:0 14px 30px -12px rgba(42,16,48,.35);color:var(--plum)}
+.chip b{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--orchid);display:block;line-height:1}
+.chip.a{left:-2%;bottom:14%}.chip.b{right:0;top:6%}
+
+/* MARQUEE */
+.band{background:var(--plum);color:var(--petal);padding:16px 0;overflow:hidden;white-space:nowrap;font:400 20px var(--serif)}
+.band div{display:inline-block;animation:slide 45s linear infinite}
+.band span{margin:0 26px}.band span::before{content:"✿";color:var(--gold);margin-right:52px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* RANGE */
+.head{max-width:660px;margin-bottom:50px}
+.head h2{font-size:clamp(34px,4.6vw,56px);color:var(--plum);margin-bottom:14px}
+.head p{color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{--k:#D6284A;background:#fff;padding:34px 30px 30px;border-radius:120px 12px 120px 12px;position:relative;overflow:hidden;transition:transform .4s,border-radius .5s;min-height:260px}
+.card::before{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:var(--k);opacity:.16;transition:transform .5s,opacity .5s}
+.card:hover,.card:focus-within{transform:translateY(-6px);border-radius:12px 120px 12px 120px}
+.card:hover::before{transform:scale(2.6);opacity:.22}
+.card h3{font-size:28px;margin:30px 0 8px;position:relative;color:var(--plum)}
+.card .dot{width:34px;height:34px;background:var(--k);border-radius:0 100% 0 100%;position:relative;margin-left:30px}
+.card p{color:var(--mute);font-size:15px;position:relative}
+.card ul{list-style:none;margin-top:14px;font-weight:500;position:relative}
+.card li{padding:3px 0}
+.card li small{color:var(--mute);font-weight:400}
+
+/* COLD CHAIN */
+.chain{background:var(--leaf);color:#fff}
+.chain .head h2{color:#fff}.chain .head p{color:#CFE7D6}
+.path{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;padding-top:34px}
+.path::before{content:"";position:absolute;top:50px;left:6%;right:6%;height:3px;background:repeating-linear-gradient(90deg,var(--sage) 0 10px,transparent 10px 18px)}
+.path .grow{position:absolute;top:49px;left:6%;height:5px;width:0;background:var(--gold);border-radius:3px;transition:width 2.2s cubic-bezier(.3,.7,.2,1)}
+.path.in .grow{width:88%}
+.node{position:relative;text-align:center;padding-top:44px}
+.node svg{position:absolute;top:0;left:50%;translate:-50% 0;width:34px;height:34px;padding:0;background:var(--gold);border-radius:0 100% 0 100%;stroke:var(--plum);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;padding:6px;width:36px;height:36px;box-sizing:content-box;margin-top:-6px}
+.node h3{font-size:20px;margin-bottom:6px}
+.node p{font-size:14.5px;color:#CFE7D6}
+.node b{display:inline-block;margin-top:8px;font:600 13px var(--sans);background:rgba(255,255,255,.14);padding:3px 12px;border-radius:999px}
+
+/* WHY */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.why h2{font-size:clamp(34px,4.6vw,56px);color:var(--plum);margin-bottom:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fact{background:#fff;padding:26px;border-radius:70px 8px 70px 8px;text-align:center}
+.fact:nth-child(even){border-radius:8px 70px 8px 70px;background:var(--petal)}
+.fact b{font:400 46px var(--serif);color:var(--orchid);display:block;line-height:1.1}
+.fact span{font-size:14px;color:var(--mute)}
+.pts{list-style:none;margin-top:22px}
+.pts li{padding:10px 0 10px 40px;position:relative;border-bottom:1px solid rgba(42,16,48,.1)}
+.pts li::before{content:"";position:absolute;left:0;top:14px;width:22px;height:22px;background:var(--leaf);border-radius:0 100% 0 100%}
+
+/* MARKETS + SEASON */
+.season{background:var(--plum);color:#fff}
+.season .head h2{color:#fff}.season .head p{color:#D9C2DE}
+.cal{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.count{background:var(--plum2);border-radius:100px 12px 100px 12px;padding:44px;display:flex;gap:24px;align-items:center}
+.count b{font:400 90px/1 var(--serif);color:var(--gold)}
+.count span{color:#D9C2DE}.count h3{font-size:26px;color:#fff;margin-bottom:6px}
+.mk{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.mk span{padding:10px 20px;background:rgba(255,255,255,.08);border-radius:999px 10px 999px 10px;font-weight:500}
+.mk span:nth-child(3n){background:var(--orchid)}.mk span:nth-child(3n+1){background:rgba(217,200,240,.18)}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.contact h2{font-size:clamp(34px,4.6vw,56px);color:var(--plum);margin-bottom:18px}
+.info{display:grid;gap:14px;margin-top:28px;color:var(--mute)}
+.info b{display:block;color:var(--orchid);font-family:var(--serif);font-weight:400;font-size:19px}
+form{background:#fff;padding:36px;border-radius:90px 12px 12px 12px;display:grid;gap:14px;box-shadow:0 30px 60px -30px rgba(184,50,128,.45)}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form label{font-size:13px;font-weight:600;color:var(--mute);display:grid;gap:5px}
+form input,form select,form textarea{font:500 16px var(--sans);padding:13px 14px;border:1.5px solid #E6D3DB;border-radius:12px;background:var(--blush);color:var(--ink);width:100%}
+form input:focus,form select:focus,form textarea:focus{outline:0;border-color:var(--orchid);box-shadow:0 0 0 3px rgba(184,50,128,.15)}
+form .btn{justify-self:start}
+footer{background:var(--plum);color:#BFA4C5;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* WHATSAPP */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;background:#1FAF5A;color:#fff;border-radius:999px 14px 999px 14px;padding:8px;font-weight:600;box-shadow:0 14px 34px -8px rgba(31,175,90,.7)}
+.wa .ic{width:54px;height:54px;border-radius:50% 8px 50% 8px;background:#fff;display:grid;place-items:center;flex:none;position:relative}
+.wa .ic::after{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid #1FAF5A;animation:ping 2.4s infinite}
+.wa svg{width:30px;height:30px;fill:#1FAF5A}
+.wa .tx{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .4s,padding .4s}
+.wa:hover .tx,.wa:focus-visible .tx{max-width:200px;padding:0 18px 0 14px}
+@keyframes ping{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+.hero .wrap>*{animation:rise .9s both}.hero .wrap>*:nth-child(2){animation-delay:.15s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(max-width:980px){
+  nav ul,header .nav>.btn{display:none}.menu{display:block}
+  nav.open ul{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--blush);padding:20px 24px 26px;gap:16px;border-bottom:1px solid var(--petal)}
+  .hero .wrap,.why,.cal,.contact{grid-template-columns:1fr}.stage{margin:0 auto;max-width:420px}
+  .grid{grid-template-columns:1fr 1fr}
+  .path{grid-template-columns:1fr;padding-left:40px}.path::before,.path .grow{display:none}
+  .node{text-align:left;padding:0 0 0 30px}.node svg{left:-30px;translate:0 0;top:0}
+  section{padding:70px 0}.count{flex-direction:column;text-align:center;border-radius:60px 12px}
+}
+@media(max-width:600px){.grid,.facts,form .two{grid-template-columns:1fr}.chip{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#top" aria-label="Mel Flowers Exporters home">
+    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><g fill="#B83280"><ellipse cx="20" cy="9" rx="5.500" ry="8"/><ellipse cx="20" cy="9" rx="5.500" ry="8" transform="rotate(72 20 20)" fill="#F5A9C0"/><ellipse cx="20" cy="9" rx="5.500" ry="8" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="5.500" ry="8" transform="rotate(216 20 20)" fill="#F5A9C0"/><ellipse cx="20" cy="9" rx="5.500" ry="8" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="4.500" fill="#F3B63F"/></svg>
+    <span>Mel Flowers<small>EXPORTERS · KENYA</small></span>
+  </a>
+  <nav id="nav"><ul><li><a href="#range">Our roses</a></li><li><a href="#chain">Farm to flight</a></li><li><a href="#farm">The farm</a></li><li><a href="#season">Peak seasons</a></li><li><a href="#contact">Get a quote</a></li></ul></nav>
+  <a class="btn" href="#contact">Request prices</a>
+  <button class="menu" id="menu" aria-expanded="false">Menu</button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Roses cut at dawn, <span id="word">crimson</span> by the time they land.</h1>
+    <p class="lead">Mel Flowers Exporters grows premium roses under glass in Kenya and ships them cold-chain to wholesalers, florists and supermarkets around the world.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="#contact">Request prices</a><a class="btn alt" href="#range">Explore varieties</a></div>
+    <div class="pick"><p>Pick a colour and watch the bloom change: <b id="vname">Red</b></p><div class="sw" id="sw"></div></div>
+  </div>
+  <div class="stage" id="stage">
+    <div class="halo"></div>
+    <svg viewBox="0 0 400 400" aria-label="Animated rose bloom"><g id="bloom"></g></svg>
+    <div class="chip a"><b>48 hrs</b>farm to market</div>
+    <div class="chip b"><b>40–90 cm</b>stem lengths</div>
+  </div>
+</div></section>
+
+<div class="band" aria-hidden="true"><div>
+  <span>Grown under glass</span><span>Cut and cooled within hours</span><span>Recycled irrigation water</span><span>Packed to your specification</span><span>Weekly flights from Nairobi</span>
+  <span>Grown under glass</span><span>Cut and cooled within hours</span><span>Recycled irrigation water</span><span>Packed to your specification</span><span>Weekly flights from Nairobi</span>
+</div></div>
+
+<section id="range"><div class="wrap">
+  <div class="head"><h2>A full spectrum from one farm</h2><p>Every main colour, grown in separate units so we can match your order and the market’s changing tastes.</p></div>
+  <div class="grid" id="cards"></div>
+</div></section>
+
+<section class="chain" id="chain"><div class="wrap">
+  <div class="head"><h2>Farm to flight, without breaking the chain</h2><p>Temperature is controlled from the moment a stem is cut until it reaches your cold room.</p></div>
+  <div class="path" id="path"><span class="grow"></span>
+    <div class="node"><svg viewBox="0 0 24 24"><path d="M12 21V9M12 12c-4 0-6-2-6-6 4 0 6 2 6 6ZM12 15c4 0 6-2 6-6-4 0-6 2-6 6Z"/></svg><h3>Harvest</h3><p>Hand-cut at the right bud stage, early morning.</p><b>Dawn</b></div>
+    <div class="node"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.500 5 9.500a5 5 0 0 1-10 0C7 9.500 9 7 12 3Z"/></svg><h3>Hydrate &amp; grade</h3><p>Stems are graded by length and bloom size, then rehydrated.</p><b>Within 2 hrs</b></div>
+    <div class="node"><svg viewBox="0 0 24 24"><path d="M12 2v20M4 6l16 12M20 6 4 18"/></svg><h3>Cold room</h3><p>Chilled and packed to your customer’s specification.</p><b>2–4 °C</b></div>
+    <div class="node"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="12" height="9" rx="1"/><path d="M14 10h4l4 3v3h-8M6 19a2 2 0 1 0 0-.1M18 19a2 2 0 1 0 0-.1"/></svg><h3>Cooled transport</h3><p>Insulated, refrigerated trucks run to the airport.</p><b>Same day</b></div>
+    <div class="node"><svg viewBox="0 0 24 24"><path d="M21 15v-2l-8-5V3.500a1.500 1.500 0 0 0-3 0V8l-8 5v2l8-2v4l-2 1.500V21l3.500-1 3.500 1v-1.500L13 18v-4Z"/></svg><h3>Air freight</h3><p>Flown out of Nairobi to Europe, the Middle East and Asia.</p><b>Next 24–48 hrs</b></div>
+  </div>
+</div></section>
+
+<section id="farm"><div class="wrap why">
+  <div>
+    <h2>Grown carefully, so it arrives beautifully</h2>
+    <p style="color:var(--mute)">All our flowers are grown in greenhouses that protect the crop from rain, wind and extreme temperatures. We recycle drain water and reuse it, saving both water and fertiliser.</p>
+    <ul class="pts"><li>Complete product range to suit every market</li><li>Consistent supply from several farm units</li><li>Variety mix guided by what buyers want next</li><li>Certifications and audit reports available on request</li></ul>
+  </div>
+  <div class="facts">
+    <div class="fact"><b data-count="60">0</b><span>rose varieties (sample figure)</span></div>
+    <div class="fact"><b data-count="25">0</b><span>hectares under glass (sample figure)</span></div>
+    <div class="fact"><b data-count="100">0</b><span>% recycled drain water target</span></div>
+    <div class="fact"><b data-count="12">0</b><span>export markets (sample figure)</span></div>
+  </div>
+</div></section>
+
+<section class="season" id="season"><div class="wrap">
+  <div class="head"><h2>Plan around the peaks</h2><p>Valentine’s Day, Mother’s Day and Women’s Day drive the biggest orders. Book early to secure your colours and stem lengths.</p></div>
+  <div class="cal">
+    <div class="count"><b id="vd">0</b><div><h3>days to Valentine’s Day</h3><span>Reserve volumes now for the 14 February peak.</span></div></div>
+    <div class="mk"><span>Netherlands</span><span>United Kingdom</span><span>Germany</span><span>UAE</span><span>Russia</span><span>Japan</span><span>Saudi Arabia</span><span>Australia</span><span>France</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div>
+    <h2>Tell us what you need, we’ll send a price</h2>
+    <p style="color:var(--mute)">Share your colours, stem lengths and weekly volumes. We reply within one working day.</p>
+    <div class="info">
+      <div><b>Farm &amp; office</b>Naivasha, Kenya (add exact location)</div>
+      <div><b>Phone and WhatsApp</b>+254 700 000 000</div>
+      <div><b>Email</b>sales@melflowers.co.ke</div>
+    </div>
+  </div>
+  <form id="form">
+    <div class="two"><label>Name<input name="n" required autocomplete="name"></label><label>Company<input name="c" autocomplete="organization"></label></div>
+    <div class="two"><label>Destination country<input name="d" required></label><label>Phone<input name="p" type="tel" required></label></div>
+    <div class="two"><label>Colours<select name="col"><option>Mixed colours</option><option>Red</option><option>White</option><option>Pink</option><option>Yellow</option><option>Orange</option><option>Lavender</option></select></label><label>Stems per week<input name="v" placeholder="e.g. 20,000"></label></div>
+    <label>Message<textarea name="m" rows="3"></textarea></label>
+    <button class="btn" type="submit">Send enquiry on WhatsApp</button>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>&copy; <span id="yr"></span> Mel Flowers Exporters. All rights reserved.</span><span>Naivasha, Kenya</span></div></footer>
+
+<a class="wa" href="https://wa.me/254700000000?text=Hello%20Mel%20Flowers%20Exporters%2C%20I%27d%20like%20a%20price%20list." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <span class="ic"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.400 8.600 3.400 15.500c0 2.400.7 4.700 1.900 6.600L3 29l7.100-2.200a12.600 12.600 0 0 0 5.900 1.500c7 0 12.600-5.600 12.600-12.500S23 3 16 3Zm0 22.800c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.200 1.300 1.400-4-.3-.4a10 10 0 0 1-1.600-5.400C5.600 10 10.300 5.400 16 5.400s10.400 4.600 10.400 10.200S21.700 25.800 16 25.800Zm5.700-7.500c-.3-.2-1.800-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 2 .8 2.800.9 3.800.7.600-.1 1.800-.8 2.100-1.500s.3-1.300.2-1.500-.3-.3-.6-.4Z"/></svg></span>
+  <span class="tx">Get a price list</span>
+</a>
+
+<script>
+const $=s=>document.querySelector(s);
+const V=[
+ {n:'Red',k:'#D6284A',w:'crimson',v:[['Freedom','70–80 cm'],['Explorer','60–70 cm'],['Red Naomi','60–80 cm']]},
+ {n:'White',k:'#E8DFE6',w:'ivory',v:[['Avalanche+','60–80 cm'],['Mondial','60–70 cm'],['Playa Blanca','70–80 cm']]},
+ {n:'Pink',k:'#EE6FA0',w:'blush pink',v:[['Sweetness','50–60 cm'],['Pink Floyd','70–80 cm'],['Topaz','60–70 cm']]},
+ {n:'Yellow',k:'#F3B63F',w:'golden',v:[['Skyline','60–70 cm'],['Sunrise','50–60 cm'],['Brighton','60–70 cm']]},
+ {n:'Orange',k:'#F2733A',w:'sunset orange',v:[['Tropical Amazon','60–70 cm'],['Orange Crush','50–60 cm'],['Free Spirit','60–70 cm']]},
+ {n:'Lavender',k:'#9A78D0',w:'lavender',v:[['Deep Purple','60–70 cm'],['Cool Water','60–80 cm'],['Ocean Song','60–70 cm']]}
+];
+// Bloom
+const bl=$('#bloom');let h='';
+[[3,14,110,64,34,'ring1',0],[2,12,86,52,22,'ring2',12],[1,10,60,40,10,'ring3',6],[0,8,34,26,0,'',0]].forEach(([i,n,len,w,s,cls,off])=>{
+  h+=`<g class="${cls}">`;
+  for(let j=0;j<n;j++){h+=`<ellipse class="petal" style="--s:${s}%" cx="200" cy="${200-len/2-14}" rx="${w/2}" ry="${len/2}" transform="rotate(${off+j*360/n} 200 200)" fill-opacity=".92"/>`}
+  h+='</g>';
+});
+h+='<circle cx="200" cy="200" r="9" fill="#F3B63F"/>';bl.innerHTML=h;
+// Swatches
+const sw=$('#sw');
+V.forEach((c,i)=>{const b=document.createElement('button');b.style.setProperty('--k',c.k);b.setAttribute('aria-label',c.n);b.setAttribute('aria-pressed',i==0);
+  b.onclick=()=>{document.documentElement.style.setProperty('--c',c.k);$('#word').textContent=c.w;$('#vname').textContent=c.n+': '+c.v.map(x=>x[0]).join(', ');
+    sw.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b))};sw.appendChild(b)});
+$('#vname').textContent='Red: '+V[0].v.map(x=>x[0]).join(', ');
+// Cards
+$('#cards').innerHTML=V.map(c=>`<article class="card" tabindex="0" style="--k:${c.k}"><div class="dot"></div><h3>${c.n} roses</h3><p>Popular varieties and typical stem lengths.</p><ul>${c.v.map(x=>`<li>${x[0]} <small>${x[1]}</small></li>`).join('')}</ul></article>`).join('');
+// Subtle bloom parallax
+const st=$('#stage');
+st.addEventListener('pointermove',e=>{const r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;bl.style.transform=`translate(${x*18}px,${y*18}px)`});
+bl.style.transition='transform .3s';
+// Reveal: cold chain line + counters
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{threshold:.4}).observe($('#path'));
+const co=new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.unobserve(e.target);const el=e.target,end=+el.dataset.count;let t0=null;
+  const f=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)))+(p==1?'+':'');if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+// Valentine's countdown
+const n=new Date(),td=new Date(n.getFullYear(),n.getMonth(),n.getDate());let vd=new Date(n.getFullYear(),1,14);if(vd<td)vd=new Date(n.getFullYear()+1,1,14);
+$('#vd').textContent=Math.round((vd-td)/864e5);
+// Menu, year
+$('#menu').onclick=e=>{const o=$('#nav').classList.toggle('open');e.target.setAttribute('aria-expanded',o)};
+document.querySelectorAll('#nav a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
+$('#yr').textContent=n.getFullYear();
+// Form to WhatsApp
+$('#form').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+  const m=`Hello Mel Flowers Exporters. I am ${f.get('n')} from ${f.get('c')||'my company'} (${f.get('p')}). Destination: ${f.get('d')}. Colours: ${f.get('col')}. Weekly volume: ${f.get('v')||'to be discussed'}. ${f.get('m')||''}`;
+  window.open('https://wa.me/254700000000?text='+encodeURIComponent(m),'_blank','noopener')};
+</script>
+</body>
+</html>
